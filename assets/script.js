@@ -9,6 +9,7 @@ const result = document.getElementById("result")
 const restartButton = document.getElementById("restart")
 const toastTitle = document.getElementById("toast-title")
 const toastInfo = document.getElementById("toast-info")
+const toast = new bootstrap.Toast(document.getElementById('toast'));
 let randomNum = Math.floor(Math.random() * 2);
 let rightAnswer = randomNum === 1 ? "anime" : "sage";
 
@@ -42,6 +43,7 @@ async function getSageQuote() {
     const data = await response.json();
     // console.log(data);
     quote.textContent = data[0].quote;
+    quote.style.display = "block";
     result.textContent = ""
     toastTitle.textContent = "Sage Quote"
     toastInfo.textContent = `💡 This is a quote from ${data[0].author}`
@@ -55,14 +57,15 @@ function checkAnswer(answer) {
         result.textContent = "Not this time!"
         result.style.display = "block"
     }
-    const toast = new bootstrap.Toast(document.getElementById('toast'));
     toast.show();
 }
 
 function startRound() {
+    toast.hide();
     result.style.display = "none"
     randomNum = Math.floor(Math.random() * 2);
     rightAnswer = randomNum === 1 ? "anime" : "sage";
+    quote.style.display = "none";
     // console.log(randomNum)
     // quote.textContent = "This is a test quote to save on requests."
     // result.textContent = ""
@@ -76,5 +79,11 @@ function startRound() {
         getSageQuote()
     }
 }
+
+document.addEventListener("restart", () => {
+    const toast = new bootstrap.Toast(document.getElementById('toast'));
+
+    toast.hide();
+})
 
 startRound()
