@@ -29,6 +29,7 @@ async function getAnimeQuote() {
     const data = await response.json();
     console.log(data);
     quote.textContent = data[0].quote;
+    quote.style.display = "block";
     result.textContent = ""
     toastTitle.textContent = "Anime Quote"
     toastInfo.textContent = `💡 This is a quote from ${data[0].character} from ${data[0].show}`
@@ -41,7 +42,7 @@ async function getSageQuote() {
         }
     });
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
     quote.textContent = data[0].quote;
     quote.style.display = "block";
     result.textContent = ""
