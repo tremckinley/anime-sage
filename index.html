@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Anime or Sage</title>
+</head>
+
+<body class="container-lg d-flex flex-column align-items-center justify-content-center vh-100 vw-100 p-0">
+    <h1>Anime or Sage</h1>
+    <h2>Was this quote from an anime character or a wise man/woman in history?</h2>
+    <p id="quote"></p>
+    <div id="button-container" class="d-flex w-50">
+        <button id="anime" class="answer btn btn-dark">Anime</button>
+        <button id="sage" class="answer btn btn-success">Sage</button>
+    </div>
+    <button id="restart" class="btn btn-primary m-2">Restart</button>
+    <p id="result"></p>
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div id="toast-header" class="d-flex px-4 py-2">
+            <strong id="toast-title" class="me-auto"></strong>
+            <small>Quote Details</small>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="toast-body">
+            <p id="toast-info"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
