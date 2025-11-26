@@ -1,5 +1,6 @@
 # Anime or Sage Game
 ## A web-based game to test your knowledge of quote origins
+*Project built for Codecademy's fullstack live course certification*
 ### Can you guess if the inspirational quote comes from an anime character or a real-life leader?
 
 #### Technology Used
