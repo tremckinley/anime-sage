@@ -25,17 +25,20 @@ restartButton.addEventListener("click", () => startRound())
 
 
 async function getAnimeQuote() {
+    quote.style.display = "block";
+    quote.textContent = "⏳ Loading...";
     const response = await fetch(animeQuotesURL);
     const data = await response.json();
     console.log(data);
     quote.textContent = data[0].quote;
-    quote.style.display = "block";
-    result.textContent = ""
-    toastTitle.textContent = "Anime Quote"
-    toastInfo.textContent = `💡 This is a quote from ${data[0].character} from ${data[0].show}`
+    result.textContent = "";
+    toastTitle.textContent = "Anime Quote";
+    toastInfo.textContent = `💡 This is a quote from ${data[0].character} from ${data[0].show}`;
 }
 
 async function getSageQuote() {
+    quote.style.display = "block";
+    quote.textContent = "⏳ Loading...";
     const response = await fetch(sageQuotesURL, {
         headers: {
             "X-Api-Key": sageAPIKey
@@ -44,7 +47,6 @@ async function getSageQuote() {
     const data = await response.json();
     console.log(data);
     quote.textContent = data[0].quote;
-    quote.style.display = "block";
     result.textContent = ""
     toastTitle.textContent = "Sage Quote"
     toastInfo.textContent = `💡 This is a quote from ${data[0].author}`
