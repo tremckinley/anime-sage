@@ -12,4 +12,5 @@
 **Deployed Link**
   https://tremckinley.github.io/anime-sage/
 
-<img width="781" height="720" alt="image" src="https://github.com/user-attachments/assets/815601e4-9df1-42be-a3bc-eae81fdba7ac" />
+<img width="1842" height="911" alt="image" src="https://github.com/user-attachments/assets/6e85e38b-86db-4383-a732-694e69337b52" />
+
